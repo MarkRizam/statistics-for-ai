@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use or build upon this repository, cite this repository metadata."
+type: software
+title: "Statistics For AI"
+abstract: "Planned research and engineering repository; no completed implementation or research results are claimed."
+authors:
+  - given-names: "Mohd Rizam"
+    family-names: "Bakar"
+repository-code: "https://github.com/MarkRizam/statistics-for-ai"
+url: "https://github.com/MarkRizam/statistics-for-ai"
+license: MIT
+keywords:
+  - "statistics"
+  - "planned"
