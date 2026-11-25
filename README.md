@@ -1,6 +1,6 @@
 # Statistics for AI — AIR-003
 
-**Status:** educational implementation locally verified; scientific audit and hosted CI pending.
+**Status:** educational implementation audited locally; updated hosted CI and release review pending.
 
 Learn statistical evaluation through transparent Python methods, controlled Monte Carlo simulations, and executable notebooks. Complements [AIR-001](https://github.com/MarkRizam/machine-learning-from-scratch), [AIR-002](https://github.com/MarkRizam/mathematics-for-ai) and [RizamLearning](https://github.com/MarkRizam/RizamLearning).
 
@@ -24,6 +24,10 @@ Eight experiments, 27 configurations, 81 per-seed records, eight executed notebo
 ![Multiplicity simulation, global null](figures/EXP-008.svg)
 
 Among 20 independent null tests, the simulated probability of at least one false rejection was 64.65% unadjusted and approximately 5% after adjustment. This is a synthetic global-null experiment, not a claim that BH generally controls FWER. All results report three-seed descriptive variability.
+
+## V1.1 audit
+
+15 new regression cases; 59 local tests passed. All 81 committed records reproduced within absolute tolerance 1e-10 (maximum observed baseline difference 6.66e-16). See [scientific audit](research/audit-v1.1.md) for corrections, statistical assumptions and limits.
 
 ## Contributions and license
 MIT for original code; dependencies retain their licenses. See [LICENSE](LICENSE), [CONTRIBUTING.md](CONTRIBUTING.md) and [CITATION.cff](CITATION.cff). No sensitive or external datasets; no paid APIs. Not peer-reviewed research.
