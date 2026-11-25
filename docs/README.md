@@ -1,5 +1,2 @@
-# Statistics For AI: documentation plan
-
-Status: **Planned**. This folder will explain probability, descriptive statistics, estimation and controlled synthetic experiments.
-
-Planned tools: Python, NumPy, SciPy, Matplotlib. Future notes should distinguish conceptual explanations, design decisions and reproducible usage instructions. No setup instructions for a working implementation are available yet.
+# Documentation
+See [research report](../research/report.md), [protocol](../research/protocol.md), [limitations](../research/limitations.md) and [portfolio article](rizamlearning-project-article.md).

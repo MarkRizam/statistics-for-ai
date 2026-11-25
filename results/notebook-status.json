@@ -1,0 +1,42 @@
+[
+  {
+    "notebook": "01-descriptive.ipynb",
+    "status": "pass",
+    "executed_code_cells": 1
+  },
+  {
+    "notebook": "02-probability.ipynb",
+    "status": "pass",
+    "executed_code_cells": 1
+  },
+  {
+    "notebook": "03-sampling.ipynb",
+    "status": "pass",
+    "executed_code_cells": 1
+  },
+  {
+    "notebook": "04-confidence.ipynb",
+    "status": "pass",
+    "executed_code_cells": 1
+  },
+  {
+    "notebook": "05-hypothesis.ipynb",
+    "status": "pass",
+    "executed_code_cells": 1
+  },
+  {
+    "notebook": "06-resampling.ipynb",
+    "status": "pass",
+    "executed_code_cells": 1
+  },
+  {
+    "notebook": "07-power.ipynb",
+    "status": "pass",
+    "executed_code_cells": 1
+  },
+  {
+    "notebook": "08-multiplicity.ipynb",
+    "status": "pass",
+    "executed_code_cells": 1
+  }
+]
