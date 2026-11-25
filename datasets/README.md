@@ -1,8 +1,2 @@
-# Statistics For AI: data plan
-
-Status: **Planned**. No datasets or participant records are included.
-
-Scope: Probability, descriptive statistics, estimation and controlled synthetic experiments. Before acquiring data, document its source, version, access terms, redistribution rights, permitted uses, provenance, preprocessing and split strategy. Prefer synthetic or appropriately licensed non-sensitive material for initial work. Do not infer permission to redistribute from permission to download.
-
-Use only public, synthetic or explicitly authorised non-sensitive material. Review dataset, model and dependency licences independently of the software licence. Do not commit credentials or private data.
-
+# Data provenance
+All data generated deterministically by the experiment runner using NumPy RNG, fixed seeds 11, 22, 33. No external data, patient data or third-party dataset is distributed. See the protocol for distributions and sample sizes.

@@ -1,57 +1,29 @@
-# Statistics For AI
+# Statistics for AI — AIR-003
 
-> **Development status: Planned.** Repository scaffolding only. No working implementation, experimental results, benchmark figures or completed research findings are claimed.
+**Status:** educational implementation locally verified; scientific audit and hosted CI pending.
 
-## Project overview
-Probability, statistics and scientific experimentation for AI research.
+Learn statistical evaluation through transparent Python methods, controlled Monte Carlo simulations, and executable notebooks. Complements [AIR-001](https://github.com/MarkRizam/machine-learning-from-scratch), [AIR-002](https://github.com/MarkRizam/mathematics-for-ai) and [RizamLearning](https://github.com/MarkRizam/RizamLearning).
 
-## Motivation
-This project is part of Mohd Rizam Bakar's learning and research portfolio while transitioning from software engineering toward AI science. Its focus is to understand and investigate probability, descriptive statistics, estimation and controlled synthetic experiments.
+## Implemented
+15 public statistical functions: descriptive statistics, covariance, normal CDF, Bayes rule, Student-t mean interval, one-sample z/t and paired t tests, paired standardized effect, chi-square goodness-of-fit, percentile bootstrap, paired sign-flip randomization, t power, minimum sample size and p-value adjustments (Holm, Bonferroni, BH). SciPy supplies distribution tails and quantiles; not a from-scratch special-function library.
 
-## Research objectives
-- Learn how sampling variability and experimental design affect scientific claims.
-- communicate uncertainty.
+## Reproduce
+Use a Python virtual environment (Python 3.13 tested). For PowerShell set `$env:OPENBLAS_NUM_THREADS='1'` and `$env:OMP_NUM_THREADS='1'`; Bash: `export OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1`.
 
-## Proposed scope
-Probability, descriptive statistics, estimation and controlled synthetic experiments.
+```sh
+python -m pip install -e ".[research]"
+python -m pytest -q
+python scripts/verify_committed_results.py
+python -m stats_for_ai.experiments
+python scripts/notebooks.py
+```
 
-## Planned technologies
-Python, NumPy, SciPy, Matplotlib. These are proposed tools, not installed dependencies or implemented integrations. Record exact versions when implementation begins.
+## Results
+Eight experiments, 27 configurations, 81 per-seed records, eight executed notebooks and 44 local passing tests. Full evidence: [research report](research/report.md), [protocol](research/protocol.md), [benchmark data](results/benchmarks.json), [limitations](research/limitations.md).
 
-## Planned experiments or implementations
-- Simulate sampling distributions with recorded random seeds.
-- Compare confidence-interval coverage in known synthetic settings.
-- Document assumptions behind a simple hypothesis test.
+![Multiplicity simulation, global null](figures/EXP-008.svg)
 
-## Reproducibility objectives
-- Record the research question, assumptions and acceptance criteria before each experiment.
-- Pin code revisions and environment/dependency versions; record hardware where relevant.
-- Document data sources, licences, preprocessing, splits and random seeds.
-- Compare against a stated baseline and report limitations and failure cases.
-- Provide runnable commands and reviewed artefact manifests when implementations exist.
-- Keep proposals separate from observations; report uncertainty rather than inventing results.
+Among 20 independent null tests, the simulated probability of at least one false rejection was 64.65% unadjusted and approximately 5% after adjustment. This is a synthetic global-null experiment, not a claim that BH generally controls FWER. All results report three-seed descriptive variability.
 
-## Current status
-**Planned.** Only documentation and repository setup exist. There are no released models, published datasets, benchmark results or participant studies in this repository.
-
-## Research and data responsibilities
-Use only public, synthetic or explicitly authorised non-sensitive material. Review dataset, model and dependency licences independently of the software licence. Do not commit credentials or private data.
-
-## Repository guide
-- [Documentation](docs/README.md): intended concepts and design notes.
-- [Research](research/README.md): questions, references and protocol planning.
-- [Datasets](datasets/README.md): provenance and access requirements.
-- [Experiments](experiments/README.md): planned protocols, not completed runs.
-- [Results](results/README.md): reporting policy; no results yet.
-- [Contributing](CONTRIBUTING.md): how to propose a focused contribution.
-
-## Related projects and portfolio
-- [mathematics-for-ai](https://github.com/MarkRizam/mathematics-for-ai)
-- [llm-evaluation-framework](https://github.com/MarkRizam/llm-evaluation-framework)
-- [RizamLearning](https://github.com/MarkRizam/RizamLearning): central portfolio and knowledge-library repository (visibility is managed separately).
-
-## Citation
-[CITATION.cff](CITATION.cff) identifies this software repository and its author. It does not claim a publication, affiliation, release or DOI.
-
-## License
-Original project software is licensed under the [MIT License](LICENSE). External datasets, pretrained models, reference documents and dependencies retain their own terms. The MIT license does not grant rights to third-party material.
+## Contributions and license
+MIT for original code; dependencies retain their licenses. See [LICENSE](LICENSE), [CONTRIBUTING.md](CONTRIBUTING.md) and [CITATION.cff](CITATION.cff). No sensitive or external datasets; no paid APIs. Not peer-reviewed research.
